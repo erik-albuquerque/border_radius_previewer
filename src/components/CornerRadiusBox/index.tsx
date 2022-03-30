@@ -41,7 +41,7 @@ export function CornerRadiusBox() {
   } = useBorderRadius();
 
   const [showBordersTools, setShowBordersTools] = useState(false);
-  const [fullCornerValue, setFullCornerValue] = useState(0);
+  const [fullCornerValue, setFullCornerValue] = useState(10);
 
   function handleShowBorderIndicator(value: boolean) {
     handleShowTopLeftBorderIndicator(value);

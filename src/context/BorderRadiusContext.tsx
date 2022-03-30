@@ -36,10 +36,10 @@ interface BorderRadiusContext {
 export const BorderRadiusContext = createContext({} as BorderRadiusContext);
 
 export function BorderRadiusProvider({ children }: BorderRadiusProviderProps) {
-  const [topLeft, setTopLeft] = useState(0);
-  const [topRight, setTopRight] = useState(0);
-  const [bottomLeft, setBottomLeft] = useState(0);
-  const [bottomRight, setBottomRight] = useState(0);
+  const [topLeft, setTopLeft] = useState(10);
+  const [topRight, setTopRight] = useState(10);
+  const [bottomLeft, setBottomLeft] = useState(10);
+  const [bottomRight, setBottomRight] = useState(10);
 
   const [isCopy, setIsCopy] = useState(false);
 
