@@ -17,8 +17,8 @@ export const BoxModel = styled.div((props: BoxModelProps) => ({
   width: "200px",
   height: "200px",
   padding: "1rem",
-  border: "1px solid var(--brown-700)",
   borderRadius: `${props.topLeft}px ${props.topRight}px ${props.bottomRight}px ${props.bottomLeft}px`,
+  backgroundImage: "linear-gradient(to top, #b5e2dc 0%, #ccc 100%)",
 }));
 
 type Corner = {

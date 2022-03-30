@@ -16,7 +16,7 @@ export const Container = styled.div`
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: var(--brown-700);
+    background-color: #eee;
     border-radius: 1rem;
   }
 `;
@@ -42,7 +42,7 @@ export const Paragraph = styled.div({
 export const BoxModel = styled.div<BoxModelProps>`
   width: 150px;
   height: 150px;
-  background-color: var(--cyan);
+  background-image: linear-gradient(to top, #b5e2dc 0%, #ccc 100%);
   border-radius: ${(props) =>
     `${props.topLeft}px ${props.topRight}px ${props.bottomRight}px ${props.bottomLeft}px`};
 `;
