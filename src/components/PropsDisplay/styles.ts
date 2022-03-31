@@ -1,8 +1,12 @@
 import styled from "styled-components";
+import { down } from "styled-breakpoints";
 
-export const Container = styled.div({
+export const Container = styled.div((props) => ({
   width: "347px",
-});
+  [down("md")(props)]: {
+    width: "100%",
+  },
+}));
 
 export const Content = styled.div({
   position: "relative",

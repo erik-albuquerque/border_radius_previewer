@@ -8,7 +8,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
 
   span {
     color: var(--brown-700);
