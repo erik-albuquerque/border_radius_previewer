@@ -11,8 +11,6 @@ import { useBreakpoints } from "./hooks/useBreakpoints";
 
 export function App() {
   const { isXs, isSm, isMd, isLg, isXl } = useBreakpoints();
-  console.log({ isXs, isSm, isMd, isLg, isXl });
-
   return (
     <Container>
       <Content>
