@@ -8,6 +8,8 @@ import { CornerRadiusBox } from "./components/CornerRadiusBox";
 import { Help } from "./components/Help";
 import { Footer } from "./components/Footer";
 import { useBreakpoints } from "./hooks/useBreakpoints";
+import { Box3D } from "./components/Box3D";
+
 
 export function App() {
   const { isXs, isSm, isMd, isLg, isXl } = useBreakpoints();
@@ -22,7 +24,8 @@ export function App() {
 
         <Sandbox>
           {(isXs || isSm) && <Logo />}
-          <Box />
+          {/* <Box /> */}
+          <Box3D />
           <CornerRadiusBox />
           <PropsDisplay />
           {isXs ? null : (isMd || isLg || isXl || !isSm) && <Footer />}

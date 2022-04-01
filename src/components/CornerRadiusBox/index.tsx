@@ -38,10 +38,10 @@ export function CornerRadiusBox() {
     handleShowBottomRightBorderIndicator,
     handleShowBottomLeftBorderIndicator,
     handleFullCorner,
+    fullCornerValue
   } = useBorderRadius();
 
   const [showBordersTools, setShowBordersTools] = useState(false);
-  const [fullCornerValue, setFullCornerValue] = useState(10);
 
   function handleShowBorderIndicator(value: boolean) {
     handleShowTopLeftBorderIndicator(value);
@@ -71,6 +71,7 @@ export function CornerRadiusBox() {
                 type="number"
                 disabled={showBordersTools}
                 value={fullCornerValue}
+                onWheel={(e) => e.currentTarget.blur()}
                 onChange={(e) => handleFullCornerValue(Number(e.target.value))}
                 onFocus={() => handleShowBorderIndicator(true)}
                 onBlur={() => handleShowBorderIndicator(false)}

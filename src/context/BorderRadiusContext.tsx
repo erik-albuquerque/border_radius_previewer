@@ -15,6 +15,7 @@ interface BorderRadiusContext {
   topRight: number;
   bottomLeft: number;
   bottomRight: number;
+  fullCornerValue: number;
   showTopLeftBorderIndicator: boolean;
   showTopRightBorderIndicator: boolean;
   showBottomRightBorderIndicator: boolean;
@@ -40,6 +41,7 @@ export function BorderRadiusProvider({ children }: BorderRadiusProviderProps) {
   const [topRight, setTopRight] = useState(10);
   const [bottomLeft, setBottomLeft] = useState(10);
   const [bottomRight, setBottomRight] = useState(10);
+  const [fullCornerValue, setFullCornerValue] = useState(10);
 
   const [isCopy, setIsCopy] = useState(false);
 
@@ -88,6 +90,7 @@ export function BorderRadiusProvider({ children }: BorderRadiusProviderProps) {
     handleBorderTopRight(value);
     handleBorderBottomLeft(value);
     handleBorderBottomRight(value);
+    setFullCornerValue(value);
   }
 
   function showMessage(value: boolean) {
@@ -139,6 +142,7 @@ export function BorderRadiusProvider({ children }: BorderRadiusProviderProps) {
         topRight,
         bottomLeft,
         bottomRight,
+        fullCornerValue,
         showTopLeftBorderIndicator,
         showTopRightBorderIndicator,
         showBottomRightBorderIndicator,
