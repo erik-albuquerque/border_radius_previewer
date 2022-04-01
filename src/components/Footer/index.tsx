@@ -1,9 +1,12 @@
+import { useSwitchBox3D } from "../../hooks/useSwitchBox3D";
 import { Container, Content } from "./styles";
 
 export function Footer() {
+  const { isChecked: showBox3D } = useSwitchBox3D();
+
   return (
     <Container>
-      <Content>
+      <Content margin={showBox3D}>
         <span>
           Made with ❤{" "}
           <a href="https://github.com/erik-albuquerque">Érik Albuquerque</a>

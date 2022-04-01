@@ -38,7 +38,7 @@ export function CornerRadiusBox() {
     handleShowBottomRightBorderIndicator,
     handleShowBottomLeftBorderIndicator,
     handleFullCorner,
-    fullCornerValue
+    fullCornerValue,
   } = useBorderRadius();
 
   const [showBordersTools, setShowBordersTools] = useState(false);
@@ -55,7 +55,6 @@ export function CornerRadiusBox() {
   }
 
   function handleFullCornerValue(value: number) {
-    setFullCornerValue(value);
     handleFullCorner(value);
   }
 
@@ -141,12 +140,7 @@ export function CornerRadiusBox() {
                   />
                 </InputContent>
               </Inputs>
-              <ResetCornersButton
-                onClick={() => {
-                  handleResetBorderRadius();
-                  setFullCornerValue(0);
-                }}
-              >
+              <ResetCornersButton onClick={() => handleResetBorderRadius()}>
                 <GrPowerReset size={15} />
               </ResetCornersButton>
             </Wrapper>

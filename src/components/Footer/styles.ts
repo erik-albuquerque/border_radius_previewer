@@ -4,11 +4,14 @@ export const Container = styled.footer`
   position: relative;
 `;
 
-export const Content = styled.div`
+type ContentProps = {
+  margin: boolean;
+};
+export const Content = styled.div<ContentProps>`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: 1rem;
+  margin-top: ${(props) => (props.margin ? "0.5rem" : "4rem")};
 
   span {
     color: var(--brown-700);

@@ -39,3 +39,15 @@ export const Aside = styled.aside({
   flexDirection: "column",
   gap: "2rem",
 });
+
+export const BoxContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+`;
