@@ -13,7 +13,7 @@ export const Container = styled.main((props) => ({
 }));
 
 export const Content = styled.div((props) => ({
-  width: "100%",
+  // width: "100%",
   marginTop: "2rem",
   display: "flex",
   flexDirection: "row",
