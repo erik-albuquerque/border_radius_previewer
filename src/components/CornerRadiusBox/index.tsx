@@ -77,8 +77,8 @@ export function CornerRadiusBox() {
               <BsFullscreen size={15} />
               <Input
                 type="number"
+                placeholder={`${fullCornerValue}`}
                 disabled={showBordersTools}
-                value={fullCornerValue}
                 onWheel={(e) => e.currentTarget.blur()}
                 onChange={(e) => handleFullCornerValue(Number(e.target.value))}
                 onFocus={() => handleShowBorderIndicator(true)}
@@ -107,7 +107,7 @@ export function CornerRadiusBox() {
                   <AiOutlineRadiusUpleft size={15} />
                   <Input
                     type="number"
-                    value={topLeft}
+                    placeholder={`${topLeft}`}
                     onChange={(e) =>
                       handleBorderTopLeft(Number(e.target.value))
                     }
@@ -119,7 +119,7 @@ export function CornerRadiusBox() {
                   <AiOutlineRadiusUpright size={15} />
                   <Input
                     type="number"
-                    value={topRight}
+                    placeholder={`${topRight}`}
                     onChange={(e) =>
                       handleBorderTopRight(Number(e.target.value))
                     }
@@ -131,7 +131,7 @@ export function CornerRadiusBox() {
                   <AiOutlineRadiusBottomleft size={15} />
                   <Input
                     type="number"
-                    value={bottomLeft}
+                    placeholder={`${bottomLeft}`}
                     onChange={(e) =>
                       handleBorderBottomLeft(Number(e.target.value))
                     }
@@ -143,7 +143,7 @@ export function CornerRadiusBox() {
                   <AiOutlineRadiusBottomright size={15} />
                   <Input
                     type="number"
-                    value={bottomRight}
+                    placeholder={`${bottomRight}`}
                     onChange={(e) =>
                       handleBorderBottomRight(Number(e.target.value))
                     }
