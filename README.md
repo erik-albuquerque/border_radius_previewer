@@ -119,6 +119,12 @@ $ yarn dev
 # acesse http://localhost:3000
 ```
 
+<h2 id="demo">🧪 Demo</h2>
+
+<a href="https://border-radius-previewer-alpha.vercel.app/">
+  <img src=".github/vercel_button.png" >  
+</a>
+
 <h2 id="contributors">📫 Como contribuir para o projeto</h2>
 
 1.  Faça um **fork** do projeto.
