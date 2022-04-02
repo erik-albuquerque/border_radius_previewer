@@ -100,7 +100,7 @@ export function Help() {
 
         <Paragraph>
           <div>
-            <strong>Um valores - </strong>
+            <strong>Um valor - </strong>
             <code>border-radius: 15px;</code>
           </div>
           <BoxModel
