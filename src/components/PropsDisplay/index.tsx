@@ -2,6 +2,7 @@ import { useBorderRadius } from "../../hooks/useBorderRadius";
 import { Container, Content, Props, Wrapper, Message } from "./styles";
 import { BsCheck } from "react-icons/bs";
 import { useState } from "react";
+import { useBreakpoints } from "../../hooks/useBreakpoints";
 
 export function PropsDisplay() {
   const {
@@ -12,6 +13,8 @@ export function PropsDisplay() {
     handleCopyToBoard,
     isCopy,
   } = useBorderRadius();
+
+  const { isMd, isLg, isXl } = useBreakpoints();
 
   const [isHover, setIsHover] = useState(false);
 
@@ -36,7 +39,9 @@ export function PropsDisplay() {
               px;
             </span>
           </Props>
-          {isCopy && <BsCheck size={30} color="var(--green-500)" />}
+          {isCopy && (isMd || isLg || isXl) && (
+            <BsCheck size={30} color="var(--green-500)" />
+          )}
         </Wrapper>
 
         {isHover && <Message>Click para copiar!</Message>}

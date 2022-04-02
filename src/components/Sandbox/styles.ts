@@ -3,7 +3,6 @@ import { down } from "styled-breakpoints";
 
 export const Container = styled.div((props) => ({
   [down("md")(props)]: {
-    width: "100%",
     display: "flex",
     alignItems: "center",
     flexDirection: "column",

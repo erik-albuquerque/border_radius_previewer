@@ -20,7 +20,8 @@ import {
   FullCornerButton,
 } from "./styles";
 import { useBorderRadius } from "../../hooks/useBorderRadius";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSwitchBox3D } from "../../hooks/useSwitchBox3D";
 
 export function CornerRadiusBox() {
   const {
@@ -41,6 +42,8 @@ export function CornerRadiusBox() {
     fullCornerValue,
   } = useBorderRadius();
 
+  const { isChecked: showBox3D } = useSwitchBox3D();
+
   const [showBordersTools, setShowBordersTools] = useState(false);
 
   function handleShowBorderIndicator(value: boolean) {
@@ -57,6 +60,12 @@ export function CornerRadiusBox() {
   function handleFullCornerValue(value: number) {
     handleFullCorner(value);
   }
+
+  useEffect(() => {
+    if (showBordersTools && showBox3D) {
+      setShowBordersTools(false);
+    }
+  }, [showBox3D]);
 
   return (
     <Container>
@@ -77,8 +86,8 @@ export function CornerRadiusBox() {
               />
             </FullCorner>
             <FullCornerButton
-              onClick={handleShowBordersTools}
-              isDisabled={showBordersTools}
+              isDisabled={showBox3D}
+              onClick={!showBox3D ? handleShowBordersTools : () => {}}
             >
               {showBordersTools ? (
                 <MdKeyboardArrowDown size={20} />
@@ -86,6 +95,9 @@ export function CornerRadiusBox() {
                 <MdKeyboardArrowRight size={20} />
               )}
             </FullCornerButton>
+            <ResetCornersButton onClick={() => handleResetBorderRadius()}>
+              <GrPowerReset size={15} />
+            </ResetCornersButton>
           </Wrapper>
 
           {showBordersTools && (
@@ -140,9 +152,6 @@ export function CornerRadiusBox() {
                   />
                 </InputContent>
               </Inputs>
-              <ResetCornersButton onClick={() => handleResetBorderRadius()}>
-                <GrPowerReset size={15} />
-              </ResetCornersButton>
             </Wrapper>
           )}
         </Tools>

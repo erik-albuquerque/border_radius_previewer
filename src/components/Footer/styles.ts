@@ -11,7 +11,7 @@ export const Content = styled.div<ContentProps>`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin-top: ${(props) => (props.margin ? "0.5rem" : "4rem")};
+  margin-top: ${(props) => (props.margin ? "0.5rem" : "2rem")};
 
   span {
     color: var(--brown-700);

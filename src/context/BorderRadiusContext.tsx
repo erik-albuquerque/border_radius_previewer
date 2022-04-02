@@ -109,6 +109,7 @@ export function BorderRadiusProvider({ children }: BorderRadiusProviderProps) {
     handleBorderTopRight(0);
     handleBorderBottomLeft(0);
     handleBorderBottomRight(0);
+    setFullCornerValue(0);
   }
 
   function handleShowTopLeftBorderIndicator(value: boolean) {

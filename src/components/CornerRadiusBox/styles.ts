@@ -75,4 +75,9 @@ export const Wrapper = styled.div({
 
 export const FullCornerButton = styled(ResetCornersButton)<FullCornerProps>`
   background-color: ${(props) => props.isDisabled && "#ebebeb"};
+  opacity: ${(props) => props.isDisabled && 0.5};
+  :hover {
+    filter: ${(props) => props.isDisabled && "none"};
+    cursor: ${(props) => props.isDisabled && "no-drop"};
+  }
 `;
