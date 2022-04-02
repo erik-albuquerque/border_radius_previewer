@@ -52,7 +52,7 @@ Esta ferramenta pode ser usada para gerar efeitos CSS3 border-radius.
 <h2 id="about">
 💻 Sobre o projeto
 </h2>
-Border Radius Previewer é um site simple e moderno. Seu proposito é gerar efeitos CSS3 border-radius.
+Border Radius Previewer é um site simple e moderno. Seu propósito é gerar efeitos CSS3 border-radius.
 <br />
 
 Ref [App-ideas](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Border-Radius-Previewer.md) by [@florinpop17](https://github.com/florinpop17)
